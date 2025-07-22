@@ -13,14 +13,33 @@ var template = (
   </div>
 );
 
+var user = {
+  name: "andrew",
+  age: 26,
+};
+
+var userName = "Andreq";
 var templateTwo = (
   <div>
-    <h1>Andreq Mead</h1>
+    <h1>{user.name}</h1>
     <p>Age: 26</p>
     <p>Location: New York</p>
   </div>
 );
 
+var app = {
+  title: "Indecision App",
+  subtitle: "Put your life in the hands of a computer",
+};
+
+var termplateThree = (
+  <div>
+    <h1>{app.title}</h1>
+    <p>{app.subtitle}</p>
+    <p>This is a paragraph</p>
+  </div>
+);
+
 var appRoot = document.getElementById("app");
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(termplateThree, appRoot);

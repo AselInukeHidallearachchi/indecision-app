@@ -35,13 +35,19 @@ var template = React.createElement(
   )
 );
 
+var user = {
+  name: "andrew",
+  age: 26
+};
+
+var userName = "Andreq";
 var templateTwo = React.createElement(
   "div",
   null,
   React.createElement(
     "h1",
     null,
-    "Andreq Mead"
+    user.name
   ),
   React.createElement(
     "p",
@@ -55,6 +61,31 @@ var templateTwo = React.createElement(
   )
 );
 
+var app = {
+  title: "Indecision App",
+  subtitle: "Put your life in the hands of a computer"
+};
+
+var termplateThree = React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "h1",
+    null,
+    app.title
+  ),
+  React.createElement(
+    "p",
+    null,
+    app.subtitle
+  ),
+  React.createElement(
+    "p",
+    null,
+    "This is a paragraph"
+  )
+);
+
 var appRoot = document.getElementById("app");
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(termplateThree, appRoot);
