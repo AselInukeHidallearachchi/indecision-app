@@ -61,11 +61,19 @@ var templateTwo = React.createElement(
   )
 );
 
+//if statements
+//ternary operators
+//logical and operator
+
 var app = {
   title: "Indecision App",
-  subtitle: "Put your life in the hands of a computer"
+  subtitle: "Put your life in the hands of a computer",
+  options: ["One", "Two", "Three"]
 };
 
+function getLocation() {
+  return "Sri Lanka";
+}
 var termplateThree = React.createElement(
   "div",
   null,
@@ -77,12 +85,21 @@ var termplateThree = React.createElement(
   React.createElement(
     "p",
     null,
-    app.subtitle
+    app.subtitle && app.subtitle
   ),
   React.createElement(
     "p",
     null,
-    "This is a paragraph"
+    getLocation()
+  ),
+  app.options.length > 0 ? React.createElement(
+    "p",
+    null,
+    app.options
+  ) : React.createElement(
+    "p",
+    null,
+    "No options"
   )
 );
 

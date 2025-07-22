@@ -27,16 +27,27 @@ var templateTwo = (
   </div>
 );
 
+//if statements
+//ternary operators
+//logical and operator
+
 var app = {
   title: "Indecision App",
   subtitle: "Put your life in the hands of a computer",
+  options: ["One", "Two", "Three"],
 };
 
+function getLocation() {
+  return "Sri Lanka";
+}
 var termplateThree = (
   <div>
     <h1>{app.title}</h1>
-    <p>{app.subtitle}</p>
-    <p>This is a paragraph</p>
+    <p>{app.subtitle && app.subtitle}</p>
+    <p>{getLocation()}</p>
+    {/* {options.length > 0 ? <p>{app.map((option) => option)}</p> : "No options"} */}
+
+    {app.options.length > 0 ? <p>{app.options}</p> : <p>No options</p>}
   </div>
 );
 
