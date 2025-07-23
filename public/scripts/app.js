@@ -61,10 +61,6 @@ var templateTwo = React.createElement(
   )
 );
 
-//if statements
-//ternary operators
-//logical and operator
-
 var app = {
   title: "Indecision App",
   subtitle: "Put your life in the hands of a computer",
