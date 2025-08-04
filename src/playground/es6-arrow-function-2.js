@@ -1,5 +1,3 @@
-"use strict";
-
 // const user = {
 //   name: "Asel",
 //   sayHi: () => {
@@ -25,15 +23,11 @@
 
 // console.log(multiplier.multiply([1, 2, 3]));
 
-var multiplier = {
+const multiplier = {
   numbers: [1, 2, 3],
   multiplyBy: 2,
-  multiply: function multiply(numbers) {
-    var _this = this;
-
-    return numbers.map(function (number) {
-      return number * _this.multiplyBy;
-    });
-  }
+  multiply: function (numbers) {
+    return numbers.map((number) => number * this.multiplyBy);
+  },
 };
 console.log(multiplier.multiply());
