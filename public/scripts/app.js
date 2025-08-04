@@ -1,39 +1,91 @@
 "use strict";
 
-// const user = {
-//   name: "Asel",
-//   sayHi: () => {
-//     console.log(this.name); // ❌ undefined
-//   },
-// };
-// user.sayHi();
+console.log("Hello, World!");
 
-// const user = {
-//   name: "Asel",
-//   sayHi() {
-//     console.log(this.name); // ✅ "Asel"
-//   },
-// };
-// user.sayHi();
+var firstname = "Asel";
 
-// const multiplier = {
-//   multiplyBy: 2,
-//   multiply(numbers) {
-//     return numbers.map((number) => number * this.multiplyBy);
-//   },
-// };
-
-// console.log(multiplier.multiply([1, 2, 3]));
-
-var multiplier = {
-  numbers: [1, 2, 3],
-  multiplyBy: 2,
-  multiply: function multiply(numbers) {
-    var _this = this;
-
-    return numbers.map(function (number) {
-      return number * _this.multiplyBy;
-    });
-  }
+var user = {
+  name: "andrew",
+  age: 26
 };
-console.log(multiplier.multiply());
+
+var app = {
+  title: "Indecision App",
+  subtitle: "Put your life in the hands of a computer",
+  options: ["One", "Two", "Three"]
+};
+
+function getLocation() {
+  return "Sri Lanka";
+}
+var termplateThree = React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "h1",
+    null,
+    app.title
+  ),
+  React.createElement(
+    "p",
+    null,
+    app.subtitle && app.subtitle
+  ),
+  React.createElement(
+    "p",
+    null,
+    getLocation()
+  ),
+  app.options.length > 0 ? React.createElement(
+    "p",
+    null,
+    app.options
+  ) : React.createElement(
+    "p",
+    null,
+    "No options"
+  )
+);
+
+var count = 0;
+var addOne = function addOne() {
+  console.log("addOne");
+};
+
+var minusOne = function minusOne() {
+  console.log("minusOne");
+};
+
+var reset = function reset() {
+  console.log("reset");
+};
+
+var templateTwo = React.createElement(
+  "div",
+  null,
+  React.createElement(
+    "h1",
+    null,
+    "Count: ",
+    count
+  ),
+  React.createElement(
+    "button",
+    { onClick: addOne },
+    "+1"
+  ),
+  React.createElement(
+    "button",
+    { onClick: minusOne },
+    "-1"
+  ),
+  React.createElement(
+    "button",
+    { onClick: reset },
+    "reset"
+  )
+);
+
+var appRoot = document.getElementById("app");
+
+ReactDOM.render(templateTwo, appRoot);

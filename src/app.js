@@ -2,30 +2,10 @@ console.log("Hello, World!");
 
 var firstname = "Asel";
 
-//JSX  - javascript XML
-var template = (
-  <div>
-    <h1>{firstname}</h1> <p>Put your life in the hands of a computer</p>
-    <ol>
-      <li>Option 1</li>
-      <li>Option 2</li>
-    </ol>
-  </div>
-);
-
 var user = {
   name: "andrew",
   age: 26,
 };
-
-var userName = "Andreq";
-var templateTwo = (
-  <div>
-    <h1>{user.name}</h1>
-    <p>Age: 26</p>
-    <p>Location: New York</p>
-  </div>
-);
 
 const app = {
   title: "Indecision App",
@@ -45,6 +25,28 @@ const termplateThree = (
   </div>
 );
 
+let count = 0;
+const addOne = () => {
+  console.log("addOne");
+};
+
+const minusOne = () => {
+  console.log("minusOne");
+};
+
+const reset = () => {
+  console.log("reset");
+};
+
+const templateTwo = (
+  <div>
+    <h1>Count: {count}</h1>
+    <button onClick={addOne}>+1</button>
+    <button onClick={minusOne}>-1</button>
+    <button onClick={reset}>reset</button>
+  </div>
+);
+
 const appRoot = document.getElementById("app");
 
-ReactDOM.render(termplateThree, appRoot);
+ReactDOM.render(templateTwo, appRoot);
